@@ -17,7 +17,7 @@ list_class = []
 async def connect_with_db():
     while True:
         await asyncio.sleep(1/100)
-        strCon = "Driver=" + driver + ";SERVER=" + srv + ";DATABASE=" + DB + ";UID=" + user + ";PWD=" + pwd + ";"
+        strCon = "Driver=" + driver + ";SERVER=" + srv + ";DATABASE=" + DB + ";UID=" + log + ";PWD=" + pwd + ";"
         lnk = pyodbc.connect(strCon)
         db = lnk.cursor()
         db.execute(sql_query)
